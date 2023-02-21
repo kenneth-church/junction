@@ -75,15 +75,17 @@ Please note that you must use a `.` before the variable name. `{{ .Subject }}` w
 Junction can be run as a container, or directly from the binary file. Once installed and configured, simply set your applications outbound SMTP server to Junction's IP and port.
 
 ### Docker
-An official image will be available shortly.
+A container image is available through GitHub Container Registry.  
 To use it, mount your `config.yaml` to `/app/config/config.yaml` and map container port `8025` to a host port of your choosing.
+
+```docker run -p 8025:8025 -v /local-path/config.yaml:/app/config/config.yaml ghcr.io/kenneth-church/junction ```
 
 ### Binary
 Download the latest release and place it where you'd like it, create a `config` directory and place your `config.yaml` within it.
 
 If desired, you can change the location of the configuration file with the `CONF_PATH` environment variable.
 
-```CONF_PATH='whatever/path/you/want ./junction```
+```CONF_PATH='/whatever/path/you/want ./junction```
 
 ## Planned Features
 - [ ] Support for Apprise configuration files
