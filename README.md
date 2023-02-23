@@ -87,6 +87,8 @@ If desired, you can change the location of the configuration file with the `CONF
 
 ```CONF_PATH='/whatever/path/you/want ./junction```
 
+[Apprise](https://github.com/caronc/apprise) will also need to be installed and available on the machine under the `apprise` command.
+
 ## Planned Features
 - [ ] Support for Apprise configuration files
 - [ ] SMTP server authentication
